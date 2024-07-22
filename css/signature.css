@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+
+.sign1_inner { padding: 0 100px;}
+#sign1 { padding: 180px 0;}
+#sign1 h2 { font-size: 20rem; line-height: 1.2; position: relative;}
+
+#sign1 h2:before{ content: ''; width: 150px; height: 40px; background: var(--main-color); border-radius: 30px; position: absolute; left: 140px; top: 0; margin-top: -2.5px; }
+#sign1 h2:after{ content: ''; width: 150px; height: 40px; background: var(--sub-color); border-radius: 30px; position: absolute; left: 290px; top: 68%; margin-top: -2.5px; }
+
+@keyframes circle {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(-360deg); }
+}
+/* transform tranlate안됨 */
+.access_ani {  position: absolute; right: 550px; top: 150px; animation: circle 30s linear infinite; color: rgba(0,0,0,0.2); width: 40%;}
+
+
+@media (max-width:1200px) {
+    #sign1 h2 { font-size: 14rem; line-height: 1.2; position: relative;}
+    #sign1 h2:before{ width: 100px; height: 30px; }
+    #sign1 h2:after{ width: 100px; height: 30px; left: 220px; }
+}
+
+
+@media (max-width:768px) {
+    #sign1 h2 { font-size: 10rem; line-height: 1.2; position: relative;}
+    #sign1 h2:before{ width: 70px; height: 25px; left: 100px;  }
+    #sign1 h2:after{ width: 70px; height: 25px; left: 150px;  }
+
+}
+
+#sign2  { display: flex; background: rgb(255, 140, 50,0.2);}
+#sign2 .sign2_img { width: 680px; }
+#sign2 .sign2_img img { width: 100%; display: block;}
+
+#sign2 .sign2_list { width: 50%; padding: 190px 0; }
+
+
+
+#sign2 .swiper-button-prev { width: 70px; height: 70px; border-radius: 50%; background: #FF8C32 url('../images/sub/chevron-left.svg') no-repeat center; margin-top: -30px; position: absolute; right: 550px; top: 100px; }
+#sign2 .swiper-button-prev::after { display: none;}
+
+#sign2 .swiper-button-next { width: 70px; height: 70px; border-radius: 50%; background: #FF8C32 url('../images/sub/chevron-right.svg') no-repeat center; margin-top: -30px; right: 750px; top: 100px;}
+#sign2 .swiper-button-next::after { display: none;}
+
+
+@media (max-width:1200px) {
+    #sign2 .sign2_img    { width: 485px;  }
+    #sign2 .swiper-button-prev { display: none;}
+    #sign2 .swiper-button-next { display: none;}
+    #sign2 .sign2_list {  padding: 100px 20px }
+    
+    
+  }
+  
+
+  @media (max-width:768px) {
+    
+    #sign2 .sign2_img    { width: 400px;  }
+    #sign2 .sign2_list {  padding: 20px 0; }
+
+    #sign2 .swiper-button-prev { display: none;}
+    #sign2 .swiper-button-next { display: none;}
+    
+  }
+
+
+
+#sign3  { display: flex; background: rgb(133, 87, 235,0.2);}
+#sign3 .sign2_img { width: 680px; }
+#sign3 .sign2_img img { width: 100%; display: block;}
+
+#sign3 .sign3_list { width: 50%; padding: 190px 0; }
+
+#sign3 .swiper-button-prev { width: 70px; height: 70px; border-radius: 50%; background: #8557EB url('../images/sub/chevron-left.svg') no-repeat center; margin-top: -30px; position: absolute; left: 630px; top: 100px; }
+#sign3 .swiper-button-prev::after { display: none;}
+
+
+#sign3 .swiper-button-next { width: 70px; height: 70px; border-radius: 50%; background: #8557EB url('../images/sub/chevron-right.svg') no-repeat center; margin-top: -30px; left: 750px; top: 100px;}
+#sign3 .swiper-button-next::after { display: none;}
+
+@media (max-width:1200px) {
+    #sign3 .sign2_img    { width: 485px;  }
+    #sign3 .swiper-button-prev { display: none;}
+    #sign3 .swiper-button-next { display: none;}
+    #sign3 .sign3_list {padding: 100px 5px; }
+  }
+  
+
+  @media (max-width:768px) {
+    
+    #sign3 .sign2_img    { width: 485px;  }
+   
+
+    #sign3 .swiper-button-prev { display: none;}
+    #sign3 .swiper-button-next { display: none;}
+   
+    .sign2_img { display: none;}
+    
+  }

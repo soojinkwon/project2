@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+:root {
+  --main-font : 'Fjalla One';
+  --sub-font: 'Noto Sans KR';
+  --main-color: #8557EB;
+  --sub-color: #FF8C32;
+  --hover-color: #67625e;
+}
+
+
+
+body { font-family: "Fjalla One", "Noto Sans KR", sans-serif; font-size: 1.6rem; line-height: 1.5; color: #000;}  
+
+.inner { max-width: calc(100% - 100px); margin: 0 auto;}
+
+.btn_more a { transition: all 0.5s; border: #000 2px solid; display: inline-block; border-radius: 20px; padding: 5px 20px; color: #000;}
+.btn_more a:hover { color: #fff; background: #000;}
+
+/* header */
+#header { padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.2); position: fixed; left: 0; top: 0; width: 100%; z-index: 2; display: block;}
+#header .inner { align-items: center; display: flex; justify-content: space-between;}
+#header h1 { width: 135px; height: 45px;}
+#header img { width: 100%; display: block;}
+#header .util { display: flex; gap: 20px;} 
+#header .util a { font-size: 20px;}
+
+/* gnb */
+#header .gnb { display: flex; gap: 30px;}
+#header .gnb > li { position: relative;}
+
+#header .gnb > li > a { color: #000; font-family: var(--main-font); display: block; padding: 10px; font-size: 2rem; }
+
+#header .gnb > li .depth2 { position: absolute; width: 600px;  z-index: 30; }
+#header .gnb > li .depth2 li a { display: block; padding: 10px 15px 10px; color: #fff;}
+
+#header .depth2_bg { position: absolute; width: 100%; height: 230px; background: #000; left: 0; top: 71px; z-index: 25;}
+
+#header:hover { background: #000;}
+#header:hover .gnb > li > a { color: #fff;}
+#header:hover .util  > li > a { color: #fff;}
+/* #header .depth2 > li:hover { color: #8557EB; } */
+#header .depth2 > li a { transition: all 0.5s; color: #fff; opacity: 0.7;}
+#header .depth2 > li a:hover { opacity: 1;}
+
+
+#header .util .language { font-size: 1.4rem; color: #666; text-transform: uppercase; position: relative; }
+#header .util .language ul { padding: 20px;  position: absolute; background: #000; z-index: 40; left: 50%; transform: translate(-50%);}
+#header .util .language ul > li > a { color: #fff;}
+
+
+
+.search { padding-top: 100px; position: absolute; left: 0; top: 71px; width: 100%; background: #fff; height: 250px; z-index: 35; border-top: 1px solid #ddd; }
+.search .search_area { display: flex; justify-content: center; }
+.search .search_area input[type="text"] { background: #eee; width: 500px; height: 50px; border-radius: 50px 0 0 50px; padding: 5px 20px; font-size: 1.6rem; font-family: var(--main-font); }
+.search .search_area input[type="submit"] { background: #eee url('../images/common/search.png') no-repeat center; border-radius: 0 50px 50px 0; width: 50px; height: 50px; font-size: 0; cursor: pointer; }
+.search .search_close { border: 0; background: #000; color: #fff; padding: 2px 5px; border-radius: 50%; font-size: 3rem; cursor: pointer; position: absolute; left: 50%; bottom: 50px; transform: translate(-50%,15px); }
+
+
+
+
+/* mgnb */
+#header .mgnb_wrap { z-index: 99999; position: fixed; left: 100%; top: 0; width: 100%; height: 100%; padding: 70px 5% 0; background: #fff; }
+#header .mgnb { border-top: 1px solid #000; }
+#header .mgnb > li { padding: 15px 0 10px; border-bottom: 1px solid #ddd; font-size: 2rem; }
+.mdepth2 { padding: 10px 0 0 30px; }
+.mdepth2 > li { position: relative; }
+.mdepth2 > li:before { content: ''; width: 5px; height: 5px; background: #999; border-radius: 50%; position: absolute; left: -15px; top: 8px; }
+.mdepth2 > li a { color:#666; font-size: 1.4rem; display: block; padding: 3px 0; }
+
+#header .mgnb_close { position: absolute; right: 5%; top: 20px; cursor: pointer; }
+
+.util .ham { display: none;}
+
+@media (max-width:1024px) {
+/*   #header h1 img { width: 100px; } */
+  #header .gnb { display: none; }
+  #header .util .sitemap { display: none; }
+  #header .util .ham { display: block; }
+}
+
+
+
+@media (max-width:768px) {
+  .util .ham { display: block;}
+}
+
+
+/* footer */
+
+
+#footer { background: #000; padding: 40px 0; color: #fff; position: relative; }
+
+#footer .footer_logo { width: 135px; height: 45px;}
+#footer .footer_logo img { width: 100%; display: block;}
+
+#footer .footer_line { position: absolute; content: ''; display: block; width: 100%; height: 2px; background: rgba(255,255,255,0.5); left: 0; top: 100px;  }
+#footer .inner {  display: flex; flex-wrap: wrap; justify-content: space-between;}
+
+/* #footer .f_l .footer_logo { padding-bottom: 42px;} */
+#footer address { padding-top: 42px;}
+#footer .f_l .copy { padding-top: 15px;}
+
+
+#footer .f_m { margin-top: 15px; display: flex; gap: 100px; margin-left: auto; margin-right: 380px;}
+#footer .f_m dl a { color: #fff;}
+#footer .f_m dl dt { font-size: 20px; padding-bottom: 42px;}
+#footer .f_m dl dd { padding-bottom: 5px;}
+
+
+#footer .f_r .footer_sns{ display: flex; gap: 20px; padding-bottom: 42px;}
+#footer .f_r .footer_sns a { transition: all 0.5s; font-size: 30px; color: rgb(255, 255, 255,0.5); }
+#footer .f_r .footer_sns a:hover { color: #fff;}
+#footer .f_r .footer_hours  { padding-top: 15px;}
+#footer .f_r a { color: #fff;}
+
+
+/* not working help none 하면 되는데 안됨*/
+@media (max-width:1024px) {
+  /* #footer .f_m { margin-top: 15px; display: flex; gap: 100px; margin-left: auto; margin-right: 380px;} */
+  #footer { font-size: 1.4rem;}
+  #footer .f_m { width: 100%; margin-right: 50px; gap: 20px;}
+  #footer .f_m dl dt a { font-size: 1.6rem; }
+  }
+  
+  
+  
+  
+  @media (max-width:768px) {
+    /* #footer { background: #000; padding: 40px 0; color: #fff; position: relative; }
+
+    #footer .footer_logo { width: calc(135px -20px); height: calc(45px - 20px); text-align: center;}
+    
+
+    #footer .footer_line { top: 100px;  }
+
+    #footer .inner {  display: blok; justify-content: flex-start;}
+    #footer address { padding-top: 42px; font-size: 1.2rem;}
+    #footer .f_l .copy { padding-top: 15px; font-size: 1.2rem; }
+
+
+    #footer .f_m { margin-left: auto; margin-right: 0; }
+    #footer .f_m dl { max-width: 100%;}
+    #footer .f_m dl dt a { font-size: 1.6rem; padding-bottom: 42px; }
+    #footer .f_m dl dd a { padding-bottom: 5px; font-size: 1.2rem;}
+
+
+    
+    #footer .f_r .footer_sns li a {font-size: 20px;}
+    
+    #footer .f_r .footer_email a { font-size: 15px;}
+    #footer .f_r .footer_hours a { font-size: 15px; padding-top: 5px;} */
+
+    #footer { font-size: 1.2rem;}
+    #footer .f_m { width: 100%; margin-right: 100px; gap: 20px;}
+    #footer .f_m dl dt a { font-size: 1.6rem; }
+
+  }
